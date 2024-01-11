@@ -1,4 +1,16 @@
-let a = 10;
-let b = a+10;
+const numberrOfFilms = +prompt('Сколько фильмов вы уже посмотрели?','');
 
-console.log(a+b+b+a++);
+const personalMovieDB = {
+	count: numberrOfFilms,
+	movies: {},
+	actors: {},
+	genres: [],
+	privat: false
+};
+
+const a = prompt('Один из последних просмотренных фильмов?','');
+const b = prompt('На сколько оцените его?','');
+
+personalMovieDB.movies[a] = b;
+
+console.log(personalMovieDB);
